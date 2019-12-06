@@ -20,7 +20,7 @@ def text_tfid_csv(nom,type):
         for i in range (0,len(jsont['global'])):
             array_comic.append(jsont['global'][i]['description'])
         print(array_comic)
-        for j in (0,len(array_comic)-1):
+        for j in range(0,len(array_comic)-1):
             array_comic[j] = remove_string_special_characters(array_comic[j])
             array_comic[j] = traitement_texte(array_comic[j])
 

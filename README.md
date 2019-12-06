@@ -38,8 +38,7 @@ D'autre part, il peut occasionnellement être condensé en un seul point et afin
 En cliquant sur l’image représentant un Word Cloud, deux options s’offrent à l’utilisateur : le choix d’un Word Cloud pour lequel le tf-idf a été calculé sur un seul document ou le choix d’un Word Cloud ou le tf-idf a été calculé sur plusieurs documents. Après le choix de ces deux options, le World Cloud s’affichera. Les mots les plus gros sont les mots avec la plus grosse fréquence.
 Enfin en cliquant sur l’image représentant un bubble chart l’utilisateur verra s’afficher un bubble chart sur lequel l’axe des abscisses représente les années (en écriture américaine), l’axe des ordonnées le prix des comics dans lesquels apparaît ce personnage. La taille des bulles représente le nombre de pages du comic, la couleur permet d’expliciter l’auteur qui écrit le comic. En survolant les bulles, le titre du comic s’affiche en dessous du graphique. Nous n’avons pas réussi à implémenter complétement la fonction qui permet, lorsque l’utilisateur survole le nom d’un auteur dans la légende, de cacher les comics qui ne correspondent pas à cet auteur. En revanche nous avons su trouver d’où venait l’erreur : la fonction ne permet pas de discerner les espaces entre le nom et le prénom. C’est pour cette raison que cette fonctionnalité n’est visible que pour « others ». Si nous avions laissé seulement le prénom de chaque auteur il n’y aurait eu aucun problème. Mais pour des raisons d’aide à la compréhension de l’utilisateur nous avons laissé le nom et prénom.
 À tout moment l’utilisateur peut revenir où il le souhaite sur le site.
-
-(screens du site ?)
+<img width="1440" alt="Capture d’écran 2019-12-05 à 21 13 50" src="https://user-images.githubusercontent.com/56385541/70305196-16d1b780-1804-11ea-9545-b276fe369f1b.png">
 
 CONTRIBUTING : Nous pourrions apporter diverses améliorations à notre projet :
 -	Un plus grand choix de type de visualisation
@@ -48,7 +47,3 @@ CONTRIBUTING : Nous pourrions apporter diverses améliorations à notre projet :
 -	La mise en place du moteur de recherche (tf-idf)
 
 CREDITS : Nous remercions l'auteur du graphe d3 "Les Misérables" sur lequel nous avons basé notre visualisation (https://gist.github.com/mbostock/4062045) de type nœud-lien, nous remercions également l’auteur du site « https://www.datavis.fr/index.php?page=word-cloud » grâce auquel nous avons pu nous inspirer pour réaliser le World Cloud. Enfin nous remercions l’auteur du Bubble Chart sur https://www.d3-graph-gallery.com/graph/bubble_template.html.
-
-
-![page_accueil](https://user-images.githubusercontent.com/49319690/68193021-9b85a780-ffb2-11e9-8b2e-2c277593142a.png)
-![graph_ironman](https://user-images.githubusercontent.com/49319690/68193083-b9530c80-ffb2-11e9-9486-d04ef226b04e.png)
