@@ -26,7 +26,7 @@ TABLE OF CONTENTS :
 -	Le fichier tf_idf.py permet de créer les matrices utiles pour l’implémentation d’un moteur de recherche basé sur la technique du tf-idf
 -	Le dernier fichier est le fichier webapp.py, qui permet le lancement des routes et donc des calculs de graphes et de l’affichage de notre site de visualisation
 
-ACCESS : Le projet sera disponible à l’adresse suivante :
+ACCESS : Le projet sera disponible à l’adresse suivante : https://github.com/mariette-dup/CMI_ISI
 
 USAGE : Après l’ouverture de notre site deux choix vont s’offrir à vous en cliquant sur une des deux images. « Présentation » qui vous offre la possibilité de lire une courte description du fonctionnement et du but de ce site ou « Mondes Marvel ». Après avoir cliqué sur « Mondes Marvel » vous pouvez choisir le héro sur lequel vous voulez avoir des informations (en cliquant sur l’image l’illustrant). Ensuite vous pouvez choisir le type de visualisation que vous désirez afficher.
 En cliquant sur l’image en forme de graphe nœud-lien vous accéder donc à ce type de graphique pour le personnage choisi préalablement.
