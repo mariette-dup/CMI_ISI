@@ -120,7 +120,8 @@ def generate_graph():
 
          char_hash= {}
          comic_hash={}
-
+         if(name == "silversurfer"):
+             name="silver surfer"
          #on récupère les données sur le personnage central depuis le site Marvel
          r= requests.get('https://gateway.marvel.com:443/v1/public/characters?name='+name+'&limit=100&apikey=4dff50d15e38e094affa81c7191ac0bd', headers={'referer': 'localhost'})
 
