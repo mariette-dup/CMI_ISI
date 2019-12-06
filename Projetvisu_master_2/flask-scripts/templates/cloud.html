@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link href="../../../static/css/sheet1.css" rel="stylesheet" type="text/css" media="all" />
+
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://rawgit.com/jasondavies/d3-cloud/master/build/d3.layout.cloud.js"></script>
+  <center>
+  <img class="logo" src="../../../static/logo.png" alt="Choix Personnages" width="500" height="150"/>
+</center>
+</head>
+<body>
+  <center>
+  <h2> World cloud of {{hero}}</h2>
+
+<img src="/static/{{hero}}.png" alt="Choix Personnages" width="150" height="150"/>
+</center>
+
+</br>
+
+<p>Ce type de visualisation est très intuitive est très intéressante à analyser. Elle permet d’avoir une idée de l’univers de notre personnage.
+Ce World Cloud a été créé après le passage de toutes nos descriptions au travers d’un algorithme de type tf-idf, une méthode de pondération.
+Cette méthode nous permet d’avoir des mots de différentes tailles dans notre visualisation.
+Les mots les plus gros sont les mots les plus représentatifs de l'univers du personnage.
+
+</p>
+
+
+
+<center>
+<script>
+
+var width=1200
+var height=1000
+var svg = d3.create("svg")
+
+d3.select("body")
+        .append( () => svg.node());
+
+fontFamily = "Open Sans",
+fontScale = d3.scaleLinear().range([20, 120]), // Construction d'une échelle linéaire continue qui va d'une font de 20px à 120px
+fillScale = d3.scaleOrdinal(d3.schemeCategory10); // Construction d'une échelle discrète composée de 10 couleurs différentes
+
+function myFunction(lien) {
+  d3.csv(lien,function(csv) {
+
+      var words = [];
+      csv.forEach(function(e,i) {
+        console.log(e["size"]);
+          words.push({"text": e.text, "size": +e.size});
+      });
+      if (csv.length<50)
+        words.length = csv.length; // Nous ne voulons que les 100 premiers mots
+      else{
+        words.length = 50;
+      }
+      // Calcul du domain d'entrée de notre fontScale
+      // L'objectif est que la plus petite occurence d'un mot soit associée à une font de 20px
+      // La plus grande occurence d'un mot est associée à une font de 120px
+      let minSize = d3.min(words, function(d) { return d.size; });
+      let maxSize = d3.max(words, function(d) { return d.size; });
+
+      // Nous projettons le domaine [plus_petite_occurence, plus_grande_occurence] vers le range [20, 120]
+      // Ainsi les mots les moins fréquents seront plus petits et les plus fréquents plus grands
+      fontScale.domain([minSize, maxSize]);
+
+      d3.layout.cloud()
+          .size([width, height])
+          .words(words)
+          .padding(1)
+          .rotate(function() {
+              return ~~(Math.random() * 2) * 45;
+          })
+          .spiral("rectangular")
+          .font(fontFamily)
+          .fontSize(function(d) { return fontScale(d.size); })
+          .on("end", draw)
+          .start();
+
+      // La méthode draw sera définie ici
+
+
+      function draw() {
+          d3.select("svg") // Ajout d'un élément SVG sur un DIV existant de la page
+              .attr("class", "svg")
+              .attr("width", width)
+              .attr("height", height)
+              .append("g") // Ajout du groupe qui contiendra tout les mots
+              .attr("transform", "translate(" + width / 2 + ", " + height / 2 + ")") // Centrage du groupe
+              .selectAll("text")
+              .data(words)
+              .enter().append("text") // Ajout de chaque mot avec ses propriétés
+                  .style("font-size", function(d) { return d.size + "px"; })
+                  .style("font-family", fontFamily)
+                  .style("fill", function(d, i) { return fillScale(d.size); })
+                  .attr("text-anchor", "middle")
+                  .attr("transform", function(d) { return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")"; })
+                  .text(function(d) { return d.text; });
+
+      }
+  });
+}
+
+if ({{type}} == 0 ){
+  myFunction("/global?heros={{hero}}")
+}
+else{
+  myFunction("/globaldeux?heros={{hero}}")
+}
+</script>
+</center>
+
+</body>
+<footer>
+  <p class="pied">
+    <a href="/">Retour vers le menu</a>
+    <a href="/accueil_2">Retour vers l'accueil</a>
+    <a href="/accueil_2/visu?heros={{hero}}">Choix visualisation</a>
+    <a href="/accueil_2/visu/affiche?visu={{visual}}">Choix type de wordcloud</a>
+</p>
+</footer>
+</html>
