@@ -38,8 +38,16 @@ D'autre part, il peut occasionnellement être condensé en un seul point et afin
 En cliquant sur l’image représentant un Word Cloud, deux options s’offrent à l’utilisateur : le choix d’un Word Cloud pour lequel le tf-idf a été calculé sur un seul document ou le choix d’un Word Cloud ou le tf-idf a été calculé sur plusieurs documents. Après le choix de ces deux options, le World Cloud s’affichera. Les mots les plus gros sont les mots avec la plus grosse fréquence.
 Enfin en cliquant sur l’image représentant un bubble chart l’utilisateur verra s’afficher un bubble chart sur lequel l’axe des abscisses représente les années (en écriture américaine), l’axe des ordonnées le prix des comics dans lesquels apparaît ce personnage. La taille des bulles représente le nombre de pages du comic, la couleur permet d’expliciter l’auteur qui écrit le comic. En survolant les bulles, le titre du comic s’affiche en dessous du graphique. Nous n’avons pas réussi à implémenter complétement la fonction qui permet, lorsque l’utilisateur survole le nom d’un auteur dans la légende, de cacher les comics qui ne correspondent pas à cet auteur. En revanche nous avons su trouver d’où venait l’erreur : la fonction ne permet pas de discerner les espaces entre le nom et le prénom. C’est pour cette raison que cette fonctionnalité n’est visible que pour « others ». Si nous avions laissé seulement le prénom de chaque auteur il n’y aurait eu aucun problème. Mais pour des raisons d’aide à la compréhension de l’utilisateur nous avons laissé le nom et prénom.
 À tout moment l’utilisateur peut revenir où il le souhaite sur le site.
+
 <img width="1440" alt="Capture d’écran 2019-12-05 à 21 13 50" src="https://user-images.githubusercontent.com/56385541/70305196-16d1b780-1804-11ea-9545-b276fe369f1b.png">
 ![Capture d’écran 2019-12-05 à 21 14 19](https://user-images.githubusercontent.com/56385541/70305593-14bc2880-1805-11ea-9e41-e6ea3887e80e.png)
+![Capture d’écran 2019-12-05 à 21 14 30](https://user-images.githubusercontent.com/56385541/70305703-5ea50e80-1805-11ea-96b0-d1719429b6c6.png)
+![Capture d’écran 2019-12-05 à 21 14 38](https://user-images.githubusercontent.com/56385541/70305714-649aef80-1805-11ea-8871-d28e25f676de.png)
+![Capture d’écran 2019-12-05 à 21 14 59](https://user-images.githubusercontent.com/56385541/70305717-682e7680-1805-11ea-936a-01a3a37fb3f0.png)
+![Capture d’écran 2019-12-05 à 21 15 46](https://user-images.githubusercontent.com/56385541/70305727-6ebcee00-1805-11ea-8b0f-344e17202198.png)
+![Capture d’écran 2019-12-05 à 21 15 56](https://user-images.githubusercontent.com/56385541/70305737-71b7de80-1805-11ea-9e3b-1543453b148e.png)
+![Capture d’écran 2019-12-05 à 21 16 15](https://user-images.githubusercontent.com/56385541/70305746-74b2cf00-1805-11ea-92d0-dc4ccc3d2573.png)
+
 
 CONTRIBUTING : Nous pourrions apporter diverses améliorations à notre projet :
 -	Un plus grand choix de type de visualisation
