@@ -40,12 +40,19 @@ Enfin en cliquant sur l’image représentant un bubble chart l’utilisateur ve
 À tout moment l’utilisateur peut revenir où il le souhaite sur le site.
 
 <img width="1440" alt="Capture d’écran 2019-12-05 à 21 13 50" src="https://user-images.githubusercontent.com/56385541/70305196-16d1b780-1804-11ea-9545-b276fe369f1b.png">
+
 ![Capture d’écran 2019-12-05 à 21 14 19](https://user-images.githubusercontent.com/56385541/70305593-14bc2880-1805-11ea-9e41-e6ea3887e80e.png)
+
 ![Capture d’écran 2019-12-05 à 21 14 30](https://user-images.githubusercontent.com/56385541/70305703-5ea50e80-1805-11ea-96b0-d1719429b6c6.png)
+
 ![Capture d’écran 2019-12-05 à 21 14 38](https://user-images.githubusercontent.com/56385541/70305714-649aef80-1805-11ea-8871-d28e25f676de.png)
+
 ![Capture d’écran 2019-12-05 à 21 14 59](https://user-images.githubusercontent.com/56385541/70305717-682e7680-1805-11ea-936a-01a3a37fb3f0.png)
+
 ![Capture d’écran 2019-12-05 à 21 15 46](https://user-images.githubusercontent.com/56385541/70305727-6ebcee00-1805-11ea-8b0f-344e17202198.png)
+
 ![Capture d’écran 2019-12-05 à 21 15 56](https://user-images.githubusercontent.com/56385541/70305737-71b7de80-1805-11ea-9e3b-1543453b148e.png)
+
 ![Capture d’écran 2019-12-05 à 21 16 15](https://user-images.githubusercontent.com/56385541/70305746-74b2cf00-1805-11ea-92d0-dc4ccc3d2573.png)
 
 
